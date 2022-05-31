@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juvenal Baera</title>
-    <link rel="shortcut icon" href="/imagens/fav.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo/style.css">
 </head>
 <body>
     <header>
@@ -35,20 +35,21 @@
             <h2>Informações pessoais</h2>
     
             <table style="width: 100%;">
+                
                 <tr>
-                    <td><strong>Nome Completo</strong></td>
+                    <th scope="row">Nome Completo</th>
                     <td>Juvenal Tembe Baera</td>
                 </tr>
                 <tr>
-                    <td><strong>Data de Nascimento</strong></td>
+                    <th scope="row">Data de Nascimento</th>
                     <td>19 de junho de 2001 (20 anos)</td>
                 </tr>
                 <tr>
-                    <td><strong>Local de Nascimento</strong></td>
+                    <th scope="row">Local de Nascimento</th>
                     <td><a href="https://pt.wikipedia.org/wiki/Beira_(Mo%C3%A7ambique)" target="_blank">Beira</a>, <a href="https://pt.wikipedia.org/wiki/Mo%C3%A7ambique" target="_blank">Moçambique</a></td>
                 </tr>
                 <tr>
-                    <td><strong>Nacionalidade</strong></td>
+                    <th scope="row"><strong>Nacionalidade</strong></th>
                     <td><a href="https://pt.wikipedia.org/wiki/Mo%C3%A7ambique" target="_blank">moçambicano</a></td>
                 </tr>
             </table>
@@ -69,7 +70,7 @@
                 </tr>
             </table>
         </div>
-
+        <br>
         <div class="conteudo">
             <p>
                 Comecei a estudar em 2006 na <abbr title="Escola primária e Completa de Muabvi-I">EPC-Muabvi-I</abbr>, com apenas 6 anos de idade, era uma escola precária e não havia energia, quando chovia as vezes não íamos a escola. Depois de 7 anos no ensino primário, fui ao ensino Secundário Básico onde fiz 8ª à 10ª classe numa escola chamada <abbr title="Escola secundáriado Marrocanhe">ESM</abbr>, depois daí em 2017 fui a uma escola na cidade onde terminei o ensino secundário na <abbr title="Escola secundária e pré-universitária da ponta-gêa">ESP ponta-gêa.</abbr>
@@ -78,9 +79,15 @@
         <!--<p id="topo" class="topo"><a class="topo" href="#">&#9650;</a></p>-->
 
         <a class="topo" href="#" title="Topo">&#9650;</a>
-
     </main>
 
     <footer>site criado por <strong>juvenal baera</strong></footer>
+
+    <script>
+        window.addEventListener('scroll', function(){
+            let scroll = document.querySelector('.topo')
+            scroll.classList.toggle('active', window.scrollY > 300)
+        })
+    </script>
 </body>
 </html>

@@ -1,19 +1,32 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Blaka+Hollow&display=swap');
+
 * {
     scroll-behavior: smooth;
+    margin-top: 10px;
+}
+
+:root{
+    --fontHeader:'Blaka Hollow', cursive;
 }
 
 body {
     background-color: #77F2E4;
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../imagens/jbBack.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 main {
     min-width: 150px;
     max-width: 800px;
-    background-color: #1ABDAC;
+    background-color:  #1abdadaf;
     margin: auto;
+    margin-top: 10px;
     box-shadow: 5px 3px 9px black;
 }
 
@@ -21,17 +34,26 @@ header {
     padding-top: 0px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background-color: #23BDAB;
+    background-color: #23bdabbe;
     width: auto;
     min-width: 400px;
     margin: auto;
     margin-top: 0px;
-    max-width: 1000px;
+    max-width: 800px;
+    box-shadow: 5px 5px 5px black;
+}
+
+header > h1 {
+    font-variant: small-caps;
+    text-align: center;
+    color: #063442;
+    font-size: 5em;
+    font-family: var(--fontHeader);
 }
 
 a {
     text-decoration: none;
-    color: #0404bc;
+    color: #0404bcdc;
     font-size: 20px;
     transition-duration: 0.5s;
     border-radius: 3px;
@@ -60,16 +82,12 @@ nav > a:hover {
     border-radius: 3px;
 }
 
-header > h1 {
-    text-align: center;
-    color: rgb(0, 4, 255);
-    font-size: 2.5em;
-    font-family: cursive;
-}
 
 table, th, td {
     border: 1px solid black;
 }
+
+th, td{padding: 5px;}
 
 div.informacao {
     box-shadow: 2px 2px 4px black;
@@ -79,6 +97,7 @@ div.informacao {
 .conteudo {
     background-color: #12746abd;
     font-family: cursive;
+    padding: 10px;
 }
 
 img {
@@ -104,26 +123,38 @@ footer {
 }
 
 .topo {
+    outline: none;
+    visibility: hidden;
     text-decoration: none;
     font-size: 40px;
     position: fixed;
-    right: 5%;
-    bottom: 10px;
+    right: 20px;
+    bottom: 20px;
     z-index: 1;
+    opacity: 0;
 }
 
 .topo:hover {
     text-decoration: none;
     color: blue;
+    background-color: transparent;
 }
 .topo::after {
     text-decoration: none;
     color: blue;
 }
 
+.topo.active{
+    opacity: 1;
+    visibility: visible;
+}
+
 @media screen and (max-width: 650px) {
     nav a {
         display: block;
         text-align: center;
+    }
+    header > h1{
+        font-size: 4em;
     }
 }
