@@ -28,6 +28,7 @@ main {
     margin: auto;
     margin-top: 10px;
     box-shadow: 5px 3px 9px black;
+    position: relative;
 }
 
 header {
@@ -58,7 +59,6 @@ a {
     transition-duration: 0.5s;
     border-radius: 3px;
 }
-
 a:visited, a:active {
     color: #0404bc;
 }
@@ -67,13 +67,11 @@ a:hover {
     text-decoration: underline;
     background-color: #77f2e45d;
 }
-
 header > nav > a{
     color: #1e2505;
     padding-left: 7px;
     margin: 7px;
 }
-
 nav > a:hover {
     background-color: #187e72;
     color: rgb(3, 97, 89);
@@ -81,7 +79,6 @@ nav > a:hover {
     transition-duration: 1s;
     border-radius: 3px;
 }
-
 
 table, th, td {
     border: 1px solid black;
@@ -123,17 +120,17 @@ footer {
 }
 
 .topo {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
     outline: none;
     visibility: hidden;
     text-decoration: none;
     font-size: 40px;
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
     z-index: 1;
     opacity: 0;
+    
 }
-
 .topo:hover {
     text-decoration: none;
     color: blue;
@@ -143,10 +140,12 @@ footer {
     text-decoration: none;
     color: blue;
 }
-
 .topo.active{
     opacity: 1;
     visibility: visible;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 }
 
 @media screen and (max-width: 650px) {
